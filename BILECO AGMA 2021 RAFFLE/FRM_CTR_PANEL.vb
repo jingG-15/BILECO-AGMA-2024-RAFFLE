@@ -593,8 +593,9 @@ Public Class FRM_CTR_PANEL
         Try
             MysqlConn.Open()
             sql = "SELECT COUNT(Distinct Bil_Account_Name) AS rollcount FROM overall_reg WHERE Bil_Account_Name NOT IN " _
-                & "(SELECT Bil_Account_Name FROM winners_tbl)" + town + tdy + "AND Bil_Class = 'RES' AND Raffle_Valid = 2 " _
-                & "AND (SELECT Account_Sequence FROM accounts_list WHERE overall_reg.Bil_Account_Number = accounts_list.Account_Number) = '1.'"
+                & "(SELECT Bil_Account_Name FROM winners_tbl)" + town + tdy + "AND Bil_Class = 'RES' AND Raffle_Valid = 2 AND " _
+                & "Bil_Account_Number IN (SELECT Bil_Account_Number FROM onsite_attendance) AND " _
+                & "(SELECT Account_Sequence FROM accounts_list WHERE overall_reg.Bil_Account_Number = accounts_list.Account_Number) = '1.'"
 
             cmd = New MySqlCommand(sql, MysqlConn)
             Dim count As Int32 = System.Convert.ToInt32(cmd.ExecuteScalar())
@@ -626,9 +627,11 @@ Public Class FRM_CTR_PANEL
 
             sql = "SELECT Bil_Account_Name, Bil_Account_Number, ID, Bil_Address, Stub_Number, town FROM overall_reg WHERE " _
                     & "Bil_Account_Name NOT IN (SELECT Bil_Account_Name FROM winners_tbl)" + town + tdy + " AND " _
+                    & "Bil_Account_Number IN (SELECT Bil_Account_Number FROM onsite_attendance) AND " _
                     & "Bil_Class = 'RES' AND Raffle_Valid = 2 AND (SELECT Account_Sequence FROM accounts_list " _
                     & "WHERE overall_reg.Bil_Account_Number = accounts_list.Account_Number) = '1.' GROUP BY Bil_Account_Name"
-            'End If
+
+
 
             cmd = New MySqlCommand(sql, MysqlConn)
             drSQL = cmd.ExecuteReader()

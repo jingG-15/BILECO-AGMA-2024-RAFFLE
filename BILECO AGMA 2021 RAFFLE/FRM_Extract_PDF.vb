@@ -186,67 +186,67 @@ Public Class FRM_Extract_PDF
         
         graph.DrawImage(Logo_TopLeft, 30, 40, 80, 80)
 
-        graph.DrawString("BILIRAN ELECTRIC COOPERATIVE, INC.", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 50)
+        graph.DrawString("BILIRAN ELECTRIC COOPERATIVE, INC.",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 50)
 
-        graph.DrawString("BILECO", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 70)
+        graph.DrawString("BILECO",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 70)
 
-        graph.DrawString("Brgy. Caraycaray, Naval, Biliran 6560", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 90)
+        graph.DrawString("Brgy. Caraycaray, Naval, Biliran 6560",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 90)
 
-        graph.DrawString("www.bileco.net", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 110)
+        graph.DrawString("www.bileco.net",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 110)
 
-        graph.DrawString("36th Annual General Membership Assembly | Batch no. : " + selected_Batch.ToString + " - " + Prize_Name_temp.ToString + " (" + Prize_Cat_temp + ")",
-           New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 30, 150)
+        graph.DrawString("36th Annual General Membership Assembly | Batch no. " + selected_Batch.ToString + " || " + Prize_Name_temp.ToString + " (" + Prize_Cat_temp + ")",
+           New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 30, 150)
 
-        graph.DrawString("Venue: Caraycaray, Naval, Biliran", _
-           New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 170)
+        graph.DrawString("Venue: BIPSU Gym, P.I. Garcia, Naval, Biliran, 6560",
+           New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 170)
 
-        graph.DrawString("Date:   November 19, 2021", _
-           New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 190)
-
-
+        graph.DrawString("Date:   August 24, 2024",
+           New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 190)
 
 
-        graph.DrawString("Date generated: " + FormatDateTime(Now, DateFormat.LongDate), _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 50)
 
-        graph.DrawString("Time generated: " + Now.Hour.ToString + ":" + Now.Minute.ToString + ":" + Now.Second.ToString + "." + Now.Millisecond.ToString, _
-           New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 70)
+
+        graph.DrawString("Date generated: " + FormatDateTime(Now, DateFormat.LongDate),
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 50)
+
+        graph.DrawString("Time generated: " + Now.Hour.ToString + ":" + Now.Minute.ToString + ":" + Now.Second.ToString + "." + Now.Millisecond.ToString,
+           New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 70)
 
         'graph.DrawString("User logged in: " + Logged_Username, _
-        '   New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 90)
+        '   New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 90)
 
         xPos += 30
 
-        graph.DrawString("Item #", _
-           New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+        graph.DrawString("Item #",
+           New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
         xPos += 50
 
-        graph.DrawString("Account #", _
-           New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+        graph.DrawString("Account #",
+           New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
         xPos += 100
 
-        graph.DrawString("Account Name", _
-          New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+        graph.DrawString("Account Name",
+          New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
         xPos += 215
 
-        graph.DrawString("Address", _
-          New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+        graph.DrawString("Address",
+          New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
         xPos += 190
 
-        graph.DrawString("Stub #", _
-          New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+        graph.DrawString("Stub #",
+          New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
         xPos += 110
 
-        graph.DrawString("Signature", _
-          New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+        graph.DrawString("Signature",
+          New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
         xPos = 0
 
@@ -273,14 +273,14 @@ Public Class FRM_Extract_PDF
 
                 xPos += 30
 
-                graph.DrawString(ItemNumber_Mstr_PDF.ToString, _
-                     New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                graph.DrawString(ItemNumber_Mstr_PDF.ToString,
+                     New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
 
                 xPos += 50
 
-                graph.DrawString(drSQL("Bil_Account_Number").ToString, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                graph.DrawString(drSQL("Bil_Account_Number").ToString,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
                 xPos += 100
                 TempStr = drSQL("Bil_Account_Name")
@@ -288,18 +288,18 @@ Public Class FRM_Extract_PDF
                 If TempLen > 30 Then
                     TempStr = Mid(drSQL("Bil_Account_Name"), 1, 30)
 
-                    graph.DrawString(TempStr, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                    graph.DrawString(TempStr,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
                     TempStr = Mid(drSQL("Bil_Account_Name"), 31, TempLen)
 
-                    graph.DrawString(TempStr, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos + 11)
+                    graph.DrawString(TempStr,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos + 11)
                 Else
                     TempStr = drSQL("Bil_Account_Name")
 
-                    graph.DrawString(TempStr, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                    graph.DrawString(TempStr,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
                 End If
 
@@ -311,26 +311,26 @@ Public Class FRM_Extract_PDF
                 If TempLen > 30 Then
                     TempStr = Mid(drSQL("Bil_Address"), 1, 27)
 
-                    graph.DrawString(TempStr, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                    graph.DrawString(TempStr,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
                     TempStr = Mid(drSQL("Bil_Address"), 28, TempLen)
 
-                    graph.DrawString(TempStr, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos + 11)
+                    graph.DrawString(TempStr,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos + 11)
                 Else
                     TempStr = drSQL("Bil_Address")
 
-                    graph.DrawString(TempStr, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                    graph.DrawString(TempStr,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
                 End If
 
                 'xPos += 230
                 xPos += 190
 
-                graph.DrawString(drSQL("Stub_Number").ToString, _
-                    New pdf2.XFont("Arial", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
+                graph.DrawString(drSQL("Stub_Number").ToString,
+                    New pdf2.XFont("Arial", 11, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, xPos, yPos)
 
                 xPos += 90
                 xPos = 0
@@ -343,10 +343,10 @@ Public Class FRM_Extract_PDF
                     CurrenPageItems = 0
                     PageNum += 1
 
-                    graph.DrawString("Page " + PageNum.ToString + " out of " + MaxPage_PDF.ToString, _
+                    graph.DrawString("Page " + PageNum.ToString + " out of " + MaxPage_PDF.ToString,
                        New pdf2.XFont("Arial", 7, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 720, 1250)
 
-                    graph.DrawString("*This is an electronic-generated report. ", _
+                    graph.DrawString("*This is an electronic-generated report. ",
                        New pdf2.XFont("Arial", 7, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 1250)
 
                     Saver_Counter += 1
@@ -399,61 +399,61 @@ Public Class FRM_Extract_PDF
 
                     graph.DrawImage(Logo_TopLeft, 30, 40, 80, 80)
 
-                    graph.DrawString("BILIRAN ELECTRIC COOPERATIVE, INC.", _
-                        New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 50)
+                    graph.DrawString("BILIRAN ELECTRIC COOPERATIVE, INC.",
+                        New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 50)
 
-                    graph.DrawString("BILECO", _
-                        New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 70)
+                    graph.DrawString("BILECO",
+                        New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 130, 70)
 
-                    graph.DrawString("Brgy. Caraycaray, Naval, Biliran 6560", _
-                        New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 90)
+                    graph.DrawString("Brgy. Caraycaray, Naval, Biliran 6560",
+                        New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 90)
 
-                    graph.DrawString("www.bileco.net", _
-                        New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 110)
+                    graph.DrawString("www.bileco.net",
+                        New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 130, 110)
 
-                    graph.DrawString("36th Annual General Membership Assembly | Batch no. : " + selected_Batch.ToString + " - " + Prize_Name_temp.ToString + " (" + Prize_Cat_temp + ")",
-                       New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 30, 150)
+                    graph.DrawString("36th Annual General Membership Assembly | Batch no. " + selected_Batch.ToString + " || " + Prize_Name_temp.ToString + " (" + Prize_Cat_temp + ")",
+                       New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 30, 150)
 
-                    graph.DrawString("Venue: Caraycaray, Naval, Biliran", _
-                       New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 170)
+                    graph.DrawString("Venue: BIPSU Gym, P.I. Garcia, Naval, Biliran, 6560",
+                       New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 170)
 
-                    graph.DrawString("Date:   August __, 2024",
-                       New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 190)
+                    graph.DrawString("Date:   August 24, 2024",
+                       New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 190)
 
-                    graph.DrawString("Date generated: " + FormatDateTime(Now, DateFormat.LongDate), _
-                        New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 50)
+                    graph.DrawString("Date generated: " + FormatDateTime(Now, DateFormat.LongDate),
+                        New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 50)
 
-                    graph.DrawString("Time generated: " + Now.Hour.ToString + ":" + Now.Minute.ToString + ":" + Now.Second.ToString + "." + Now.Millisecond.ToString, _
-                       New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 70)
+                    graph.DrawString("Time generated: " + Now.Hour.ToString + ":" + Now.Minute.ToString + ":" + Now.Second.ToString + "." + Now.Millisecond.ToString,
+                       New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 580, 70)
 
                     xPos += 30
 
-                    graph.DrawString("Item #", _
-                       New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+                    graph.DrawString("Item #",
+                       New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
                     xPos += 50
 
-                    graph.DrawString("Account #", _
-                       New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+                    graph.DrawString("Account #",
+                       New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
                     xPos += 100
 
-                    graph.DrawString("Account Name", _
-                      New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+                    graph.DrawString("Account Name",
+                      New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
                     xPos += 215
 
-                    graph.DrawString("Address", _
-                      New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+                    graph.DrawString("Address",
+                      New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
                     xPos += 190
 
-                    graph.DrawString("Stub #", _
-                      New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+                    graph.DrawString("Stub #",
+                      New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
                     xPos += 110
 
-                    graph.DrawString("Signature", _
-                      New pdf2.XFont("Arial", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
+                    graph.DrawString("Signature",
+                      New pdf2.XFont("Arial", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, xPos, 230)
 
                     xPos = 0
 
@@ -472,10 +472,10 @@ Public Class FRM_Extract_PDF
 
 
         PageNum += 1
-        graph.DrawString("Page " + PageNum.ToString + " out of " + MaxPage_PDF.ToString, _
+        graph.DrawString("Page " + PageNum.ToString + " out of " + MaxPage_PDF.ToString,
             New pdf2.XFont("Arial", 7, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 720, 1250)
 
-        graph.DrawString("*This is an electronic-generated report. ", _
+        graph.DrawString("*This is an electronic-generated report. ",
             New pdf2.XFont("Arial", 7, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, 1250)
 
         If yPos < 1100 Then
@@ -486,34 +486,34 @@ Public Class FRM_Extract_PDF
 
 
 
-        graph.DrawString("Prepared by:", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 30, yPos)
+        graph.DrawString("Prepared by:",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 30, yPos)
 
-        graph.DrawString("Verified by:", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 300, yPos)
+        graph.DrawString("Verified by:",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 300, yPos)
 
-        graph.DrawString("Noted by:", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 550, yPos)
+        graph.DrawString("Noted by:",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Bold), pdf2.XBrushes.Black, 550, yPos)
 
 
         yPos += 40
 
-        graph.DrawString("______________________", _
-            New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Underline), pdf2.XBrushes.Black, 30, yPos)
+        graph.DrawString("______________________",
+            New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Underline), pdf2.XBrushes.Black, 30, yPos)
 
-        graph.DrawString("Ma. Leizyl Q. Garcia", _
-          New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Underline), pdf2.XBrushes.Black, 300, yPos)
+        graph.DrawString("Maureen D. Nierra",
+          New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Underline), pdf2.XBrushes.Black, 300, yPos)
 
-        graph.DrawString("Gerardo N. Oledan, REE", _
-          New pdf2.XFont("Tahoma", 10, PdfSharp.Drawing.XFontStyle.Underline), pdf2.XBrushes.Black, 550, yPos)
+        graph.DrawString("Gerardo N. Oledan, REE",
+          New pdf2.XFont("Tahoma", 12, PdfSharp.Drawing.XFontStyle.Underline), pdf2.XBrushes.Black, 550, yPos)
 
         yPos += 15
 
 
-        graph.DrawString("User", _
+        graph.DrawString("  ",
             New pdf2.XFont("Tahoma", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 30, yPos)
 
-        graph.DrawString("FSDM", _
+        graph.DrawString("Internal Auditor",
                New pdf2.XFont("Tahoma", 8, PdfSharp.Drawing.XFontStyle.Regular), pdf2.XBrushes.Black, 300, yPos)
 
 
